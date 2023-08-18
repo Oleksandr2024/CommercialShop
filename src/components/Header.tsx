@@ -1,28 +1,43 @@
-import Nav from "./Nav";
-import useCart from "../hooks/useCart";
+// import Nav from "./Nav";
+// import useCart from "../hooks/useCart";
 
-type PropsType = {
-  viewCart: boolean;
-  setViewCart: React.Dispatch<React.SetStateAction<boolean>>;
-};
+import CartLink from "./CartLink";
+import Navbar from "./Navbar";
 
-const Header = ({ viewCart, setViewCart }: PropsType) => {
-  const { totalItems, totalPrice } = useCart();
+// type PropsType = {
+//   viewCart: boolean;
+//   setViewCart: React.Dispatch<React.SetStateAction<boolean>>;
+// };
 
-  const content = (
+const Header = () => {
+  // const { totalItems, totalPrice } = useCart();
+
+  // const content = (
+  //   <header className="header">
+  //     <div className="header__title-bar">
+  //       <h1>Shop Name</h1>
+  //       <div className="header__price-box">
+  //         <p>Total Items: {totalItems}</p>
+  //         <p>Total Price: {totalPrice}</p>
+  //       </div>
+  //       <Nav />
+  //     </div>
+  //   </header>
+  // );
+
+  return (
     <header className="header">
-      <div className="header__title-bar">
-        <h1>Shop Name</h1>
-        <div className="header__price-box">
-          <p>Total Items: {totalItems}</p>
-          <p>Total Price: {totalPrice}</p>
-        </div>
-        <Nav viewCart={viewCart} setViewCart={setViewCart} />
-      </div>
+      <section className="header_logo_section">
+        <img
+          src="../images/logo.png"
+          alt="Logo image"
+          className="header_logo_image"
+        />
+      </section>
+      <Navbar />
+      <CartLink />
     </header>
   );
-
-  return content;
 };
 
 export default Header;

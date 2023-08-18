@@ -1,6 +1,6 @@
 import useCart from "../hooks/useCart";
 import { useState } from "react";
-import CartLineItem from "./CartLineItem";
+import CartLineItem from "../components/CartLineItem";
 
 const Cart = () => {
   const [confirm, setConfirm] = useState<boolean>(false);
@@ -28,7 +28,7 @@ const Cart = () => {
           );
         })}
       </ul>
-      <div className="cart__totals">
+      <section className="cart__totals">
         <p>Total Items: {totalItems}</p>
         <p>Total Price: {totalPrice}</p>
         <button
@@ -38,7 +38,7 @@ const Cart = () => {
         >
           Place Order
         </button>
-      </div>
+      </section>
     </>
   );
 

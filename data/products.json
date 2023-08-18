@@ -1,19 +1,29 @@
 {
   "products": [
     {
-      "sku": "cheap",
-      "name": "Widget",
-      "price": 9.99
+      "sku": "classic-almond",
+      "name": "Almond Butter",
+      "price": 14.99
     },
     {
-      "sku": "ordinary",
-      "name": "Premium Widget",
-      "price": 19.99
+      "sku": "classic-cashew",
+      "name": "Cashew Butter",
+      "price": 13.99
     },
     {
-      "sku": "expensive",
-      "name": "Deluxe Widget",
-      "price": 29.99
+      "sku": "classic-peanut",
+      "name": "Peanut Butter",
+      "price": 12.99
+    },
+    {
+      "sku": "classic-pecan",
+      "name": "Pecan Butter",
+      "price": 16.99
+    },
+    {
+      "sku": "classic-pistachio",
+      "name": "Pistachio Butter",
+      "price": 17.99
     }
   ]
 }

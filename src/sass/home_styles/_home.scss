@@ -1,0 +1,22 @@
+@use "../global/global" as i;
+
+.home_wallpaper {
+  position: relative;
+  background-image: url("../images/peanut-cover.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  //   top: 50%;
+  //   transition: top 3s ease; /* Add a transition effect */
+}
+
+.shop_section {
+  background-color: i.$background-color;
+  height: 50vh;
+}
+
+.about_section {
+  border-top: 2px solid grey;
+  background-color: i.$background-color;
+  height: 60vh;
+}

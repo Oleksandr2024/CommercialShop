@@ -1,24 +1,26 @@
 import "./sass/main.scss";
-import { useState } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import ProductList from "./components/ProductList";
-import Cart from "./components/Cart";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import Layout from "./layouts/Layout";
+import HomePage from "./pages/HomePage";
+import NotFound from "./pages/NotFound";
+import CartPage from "./pages/CartPage";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
-  const [viewCart, setViewCart] = useState<boolean>(false);
-
-  const pageContent = viewCart ? <Cart /> : <ProductList />;
-
-  const content = (
-    <>
-      <Header viewCart={viewCart} setViewCart={setViewCart} />
-      {pageContent}
-      <Footer viewCart={viewCart} />
-    </>
+  return (
+    <BrowserRouter>
+      <>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/products/:id" element={<ProductPage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </>
+    </BrowserRouter>
   );
-
-  return content;
 }
 
 export default App;

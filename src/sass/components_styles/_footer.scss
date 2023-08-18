@@ -1,0 +1,7 @@
+@use "../global/global" as i;
+
+footer {
+  border-top: 2px solid grey;
+  background-color: i.$dark-color;
+  height: 30vh;
+}

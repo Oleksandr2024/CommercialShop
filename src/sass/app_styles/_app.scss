@@ -8,18 +8,23 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Nunito", sans-serif;
-}
-
 #root {
   /* React root div */
-  min-height: 100vh;
+  min-height: 100vh; //useful tip***
   display: flex;
   flex-flow: column nowrap;
 }
 
-.app {
-  color: i.$green-color;
-  background-color: i.$background-color;
+body {
+  font-family: "Nunito", sans-serif;
 }
+
+//cart
+.main {
+  min-height: 100vh;
+}
+
+// .app {
+//   color: i.$green-color;
+//   background-color: i.$background-color;
+// }
